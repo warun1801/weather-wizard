@@ -15,7 +15,7 @@ export default function WeatherInput() {
     }
 
     const fetchWeather = async (city: string) => {
-        const url = `http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&aqi=no`;
+        const url = `http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${city}&aqi=no`;
         try{
             const response = await fetch(url);
             const data = await response.json();
